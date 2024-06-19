@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Heebo', sans-serif;
+    padding: 50px 0;
+    display: flex;
+    height: 100vh;
+    background-color: #e0f1e7;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Survey Form Styles */
+#survey-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+/* h2 Styles */
+h2 {
+    color: #293E3F;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+/* Flexbox layout for First Name and Last Name */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-left: -5px;
+    margin-top: 8px;
+}
+
+.field-container {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.field-container label,
+.field-container input {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2F3533; /* Label color */
+    margin-left: 18px;
+    margin-top: 12px;
+}
+
+label[for="email"] {
+    margin-top: 25px;
+}
+
+label[for="general-enquiry"],
+label[for="support-request"] {
+    margin-top: 5px;
+    margin-left: 6px;
+}
+
+label[for="message"] {
+    margin-top: 15px;
+    margin-bottom: -3px;
+}
+
+/* Paragraph Styles */
+p {
+    margin: 26px auto 20px 18px;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 2px solid #aeb4b2;
+    border-radius: 4px;
+    margin-left: 15px;
+    width: calc(100% - 10px);
+}
+
+input[type="email"] {
+    width: calc(100% - 10px); /* Specific width for email field */
+    margin-top: 8px;
+}
+
+input[type="checkbox"] {
+    margin-top: 18px;
+    margin-left: 3px;
+    font-size: 1em;
+}
+
+/* Custom Radio Button Styles */
+.radio-container {
+    border: 2px solid #AEB4B2;
+    padding: 10px;
+    border-radius: 4px;
+    margin-left: 15px;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    width: calc(50% - 30px); /* Adjusting for padding and margin */
+    justify-content: center;
+    height: 50px; /* Reduced height */
+}
+
+/* Flexbox layout for Query Type */
+.query-type-flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Textarea Styles */
+#message {
+    width: calc(100% - 10px); /* Specific width for message textarea */
+    margin-top: 15px;
+}
+
+/* Button Style */
+button {
+    background: #0c7d69;
+    border: none;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: calc(100% - 10px);
+    max-width: 545px;
+    margin-top: 20px;
+    margin-left: 12px;
+}
+
+button:hover {
+    background: #0a6b57;
+}
+
+.popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+        margin: 120px auto;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .field-container {
+        width: 100%;
+        margin-bottom: 15px; /* Add some space between the fields */
+    }
+    
+    .flex-container label,
+    .radio-container,
+    #message,
+    button {
+        width: calc(100% - 10px);
+        margin-left: 15px;
+    }
+
+    .flex-container label,
+    .flex-container input[type="text"] {
+        width: calc(100% - 10px);
+    }
+
+    input[type="email"],
+    textarea,
+    .radio-container {
+        width: calc(100% - 10px);
+    }
+
+    .query-type-flex-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .radio-container {
+        margin-bottom: 10px;
+        width: calc(100% - 10px);
+    }
+}
